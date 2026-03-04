@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal Penawaran Jasa , House of Peace | Majesta Solution</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --bg-color: #F8FAFC;
+      --surface: #FFFFFF;
+      --text-primary: #0F172A;
+      --text-secondary: #64748B;
+      --border-color: rgba(226, 232, 240, 0.8);
+      --accent: #0F766E;
+      --accent-light: #F0FDFA;
+      --surface-dark: #0F172A;
+      --text-on-dark: #F8FAFC;
+      --text-muted-dark: #94A3B8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-primary);
+      line-height: 1.7;
+      letter-spacing: -0.01em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 10mm;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      body {
+        background: white;
+      }
+
+      .cover {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 40px 60px !important;
+        page-break-after: always;
+        border-bottom: none !important;
+        overflow: hidden;
+      }
+
+      .cover::before {
+        display: none !important;
+      }
+
+      .cover h1 {
+        font-size: 48px !important;
+      }
+
+      .cover-logo-wrap {
+        margin-bottom: 24px !important;
+      }
+
+      .page {
+        padding: 40px 60px !important;
+        page-break-after: always;
+        page-break-inside: avoid;
+        overflow: hidden;
+        max-width: none !important;
+      }
+
+      .page-break {
+        page-break-before: always;
+      }
+
+      .section-title {
+        font-size: 32px !important;
+      }
+
+      h3 {
+        font-size: 22px !important;
+        margin: 24px 0 16px !important;
+      }
+
+      .prose {
+        font-size: 14px !important;
+      }
+
+      .doc-footer {
+        margin-top: 24px !important;
+        padding-top: 16px !important;
+      }
+
+      .grid-2,
+      .grid-3,
+      .payment-grid,
+      .maint-grid {
+        page-break-inside: avoid;
+      }
+
+      .card,
+      .callout,
+      .price-box,
+      .maint-card,
+      .cta-section {
+        box-shadow: none !important;
+        border: 1px solid #E2E8F0 !important;
+        page-break-inside: avoid;
+      }
+
+      .step-list li {
+        page-break-inside: avoid;
+      }
+
+      table {
+        page-break-inside: avoid;
+        font-size: 13px !important;
+      }
+
+      .comparison {
+        page-break-inside: avoid;
+      }
+
+      .cta-btn,
+      #print-btn {
+        display: none !important;
+      }
+
+      .callout,
+      .price-box {
+        margin: 16px 0 !important;
+        padding: 20px 28px !important;
+      }
+
+      .step-list li {
+        padding: 16px 24px !important;
+        margin-bottom: 12px !important;
+      }
+
+      .bullet-list li {
+        padding: 8px 0 8px 24px !important;
+        font-size: 13px !important;
+      }
+    }
+
+    /* COVER */
+    .cover {
+      background: var(--surface);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px 120px;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(15, 118, 110, 0.05) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .cover-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+
+    .cover-logo-wrap {
+      margin-bottom: 48px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .cover-logo-img {
+      height: 72px;
+      width: auto;
+    }
+
+    .cover-logo-sub {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-top: 12px;
+    }
+
+    .cover-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    .cover h1 {
+      font-size: 72px;
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .cover h1 span {
+      color: var(--text-secondary);
+    }
+
+    .cover-sub {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin-bottom: 64px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .cover-divider {
+      width: 64px;
+      height: 2px;
+      background: var(--accent);
+      margin-bottom: 48px;
+    }
+
+    .cover-meta-row {
+      display: flex;
+      gap: 80px;
+      flex-wrap: wrap;
+    }
+
+    .cover-meta-item .label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .cover-meta-item .value {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .cover-version {
+      position: absolute;
+      bottom: 40px;
+      right: 120px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      letter-spacing: 0.1em;
+      z-index: 1;
+    }
+
+    /* PAGE LAYOUT */
+    .page {
+      padding: 100px 120px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .section-title span {
+      color: var(--text-secondary);
+    }
+
+    .section-divider {
+      width: 64px;
+      height: 2px;
+      background: var(--accent);
+      margin: 0 0 56px 0;
+    }
+
+    .prose {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 72ch;
+    }
+
+    .prose+.prose {
+      margin-top: 24px;
+    }
+
+    .prose strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    p.statement {
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      line-height: 1.4;
+      max-width: 800px;
+      margin: 48px 0;
+      padding-left: 32px;
+      border-left: 4px solid var(--accent);
+    }
+
+    .callout {
+      border-left: 4px solid var(--accent);
+      background: var(--surface);
+      padding: 32px 40px;
+      border-radius: 0 24px 24px 0;
+      margin: 40px 0;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.03);
+      border: 1px solid var(--border-color);
+      border-left-width: 4px;
+    }
+
+    .callout strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .callout p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .callout-dark {
+      background: var(--surface-dark);
+      border-left-color: var(--accent);
+      border-color: var(--surface-dark);
+    }
+
+    .callout-dark strong {
+      color: var(--text-on-dark);
+    }
+
+    .callout-dark p {
+      color: var(--text-muted-dark);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: 2.5rem;
+      padding: 40px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+      margin-bottom: 24px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.03);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .card-dark {
+      background: var(--surface-dark);
+      border-color: var(--surface-dark);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-dark .card-title {
+      color: var(--text-on-dark);
+    }
+
+    .card-dark p {
+      color: var(--text-muted-dark);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .bento-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .bento-3 > div:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 32px 0 48px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    th {
+      background: var(--bg-color);
+      color: var(--text-secondary);
+      padding: 16px 24px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    td {
+      padding: 20px 24px;
+      font-size: 15px;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      vertical-align: top;
+      line-height: 1.6;
+      background: var(--surface);
+    }
+
+    table tr:last-child td {
+      border-bottom: none;
+    }
+
+    td strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    td.gold {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    td.sage {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .step-list {
+      list-style: none;
+      margin: 0 0 32px;
+      position: relative;
+    }
+
+    .step-list::before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 20px;
+      bottom: 20px;
+      width: 2px;
+      background: var(--border-color);
+      z-index: 0;
+    }
+
+    .step-list li {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 32px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.02);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .step-list li:hover {
+      transform: translateX(8px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.06);
+      border-color: var(--accent);
+    }
+
+    .step-list li:active {
+      transform: translateX(4px) scale(0.98);
+    }
+
+    .card:active {
+      transform: scale(0.98);
+      transition: transform 0.1s ease;
+    }
+
+    .step-num {
+      min-width: 48px;
+      height: 48px;
+      background: var(--surface);
+      border: 2px solid var(--border-color);
+      color: var(--text-primary);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.05);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .step-num.gold {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .step-num.sage {
+      background: var(--surface-dark);
+      color: white;
+      border-color: var(--surface-dark);
+    }
+
+    .step-content {
+      padding-left: 24px;
+    }
+
+    .step-content h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .step-content p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 65ch;
+    }
+
+    #print-btn {
+      position: fixed;
+      top: 40px;
+      right: 40px;
+      z-index: 999;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 100px;
+      font-size: 15px;
+      font-weight: 600;
+      box-shadow: 0 20px 40px -15px rgba(15, 118, 110, 0.5);
+      cursor: pointer;
+      font-family: inherit;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #print-btn:hover {
+      transform: scale(1.05) translateY(-4px);
+    }
+
+    #print-btn:active {
+      transform: scale(0.95);
+    }
+
+    .bullet-list {
+      list-style: none;
+      margin: 24px 0 32px;
+    }
+
+    .bullet-list li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      padding: 12px 0 12px 32px;
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .bullet-list li:last-child {
+      border-bottom: none;
+    }
+
+    .bullet-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .bullet-list li strong {
+      color: var(--text-primary);
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 2.5rem;
+      overflow: hidden;
+      margin: 32px 0 48px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.03);
+    }
+
+    .comparison-col {
+      padding: 48px;
+    }
+
+    .comparison-col.bad {
+      background: var(--surface);
+    }
+
+    .comparison-col.good {
+      background: var(--bg-color);
+    }
+
+    .comparison-header {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .comparison-col.bad .comparison-header {
+      color: var(--text-secondary);
+    }
+
+    .comparison-col.good .comparison-header {
+      color: var(--accent);
+    }
+
+    .comparison-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .comparison-col.bad .comparison-item {
+      color: var(--text-secondary);
+    }
+
+    .comparison-col.good .comparison-item {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-gold {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .tag-sage {
+      background: var(--bg-color);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+    }
+
+    .tag-green {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .price-box {
+      background: var(--surface-dark);
+      border-radius: 2.5rem;
+      padding: 56px 64px;
+      margin: 48px 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
+    }
+
+    .price-box::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .price-box-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted-dark);
+      margin-bottom: 16px;
+    }
+
+    .price-amount {
+      font-size: 64px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--text-on-dark);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .price-note {
+      font-size: 15px;
+      color: var(--text-muted-dark);
+      margin-bottom: 40px;
+    }
+
+    .price-includes {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .price-includes li {
+      font-size: 15px;
+      color: var(--text-on-dark);
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .price-includes li::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 14px;
+      background: rgba(20, 184, 166, 0.1);
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .payment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 32px 0;
+    }
+
+    .payment-card {
+      border: 1px solid var(--border-color);
+      background: var(--surface);
+      border-radius: 2.5rem;
+      padding: 40px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.03);
+    }
+
+    .payment-card.active {
+      border-color: var(--accent);
+      background: var(--bg-color);
+    }
+
+    .payment-number {
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .payment-trigger {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+
+    .payment-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .cta-section {
+      background: var(--surface-dark);
+      border-radius: 2.5rem;
+      padding: 80px 64px;
+      text-align: center;
+      margin: 64px 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-section h2 {
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: var(--text-on-dark);
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section h2 span {
+      color: var(--accent);
+    }
+
+    .cta-section p {
+      font-size: 18px;
+      color: var(--text-muted-dark);
+      margin-bottom: 48px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--text-on-dark);
+      color: var(--surface-dark);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 20px 48px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.02);
+    }
+
+    .cta-btn:active {
+      transform: scale(0.98) translateY(1px);
+    }
+
+    .maint-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 32px 0;
+    }
+
+    .maint-card {
+      border-radius: 2.5rem;
+      padding: 48px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.03);
+    }
+
+    .maint-card.free {
+      background: var(--surface);
+      border: 2px solid var(--accent);
+    }
+
+    .maint-card.paid {
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
+    }
+
+    .maint-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .maint-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .maint-icon.free {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .maint-icon.paid {
+      background: var(--surface);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+    }
+
+    .maint-title {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+    }
+
+    .maint-price {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 100px;
+      display: inline-block;
+      margin-bottom: 24px;
+      letter-spacing: 0.05em;
+    }
+
+    .maint-price.free {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .maint-price.paid {
+      background: var(--surface);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+    }
+
+    .maint-list {
+      list-style: none;
+    }
+
+    .maint-list li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.6;
+    }
+
+    .maint-list li:last-child {
+      border-bottom: none;
+    }
+
+    .maint-list li span.icon {
+      color: var(--accent);
+      font-size: 16px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .maint-list.paid-list li span.icon {
+      color: var(--text-secondary);
+    }
+
+    .doc-footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .doc-footer .brand {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .doc-footer .version {
+      font-size: 12px;
+      color: var(--text-secondary);
+      letter-spacing: 0.05em;
+    }
+
+    h3 {
+      font-size: 28px;
+      color: var(--text-primary);
+      margin: 48px 0 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-inner">
+      <div class="cover-logo-wrap">
+        <img
+          src="data:image/jpeg;base64,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"
+          class="cover-logo-img" alt="Majesta Solution" style="height:80px; width:auto;">
+        <span class="cover-logo-sub">Strategic Finance dan Digital Advisory</span>
+      </div>
+
+      <div class="cover-eyebrow">Proposal Penawaran Jasa</div>
+
+      <h1>Official Website<br><span>House of Peace</span></h1>
+
+      <p class="cover-sub">
+        Landing Page dan Company Profile<br>
+        Hypnotherapy dan Wellness Center
+      </p>
+
+      <div class="cover-divider"></div>
+
+      <div class="cover-meta-row">
+        <div class="cover-meta-item">
+          <div class="label">Dipersiapkan untuk</div>
+          <div class="value">House of Peace</div>
+        </div>
+        <div class="cover-meta-item">
+          <div class="label">Dipersiapkan oleh</div>
+          <div class="value">Majesta Solution</div>
+        </div>
+        <div class="cover-meta-item">
+          <div class="label">Tanggal</div>
+          <div class="value">4 Maret 2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="cover-version">Confidential</div>
+  </div>
+
+
+  <!-- 01 RINGKASAN EKSEKUTIF -->
+  <div class="page page-break">
+    <div class="section-label">Section 01</div>
+    <div class="section-title">Ringkasan <span>Eksekutif</span></div>
+    <div class="section-divider"></div>
+
+    <p class="prose">
+      House of Peace sudah punya semua yang dibutuhkan untuk dipercaya: <strong>lebih dari 5.000 pasien yang berhasil
+        pulih</strong>, liputan dari 20+ media nasional, dan metodologi hipnoterapi yang telah terbukti mengubah hidup
+      nyata. Yang belum ada adalah jembatan digitalnya.
+    </p>
+
+    <p class="prose">
+      Calon pasien yang mengetik "hipnoterapi Jakarta" di Google hari ini tidak menemukan HOPE. Mereka menemukan
+      klinik
+      lain. Bukan karena HOPE kalah dalam kualitas , tapi karena kualitas yang tidak tersampaikan secara digital sama
+      saja dengan tidak ada.
+    </p>
+
+    <p class="statement">
+      "Every day without a solid website is a day where someone who needs help cannot find HOPE."
+    </p>
+
+    <p class="prose">
+      Untuk itu, Majesta Solution telah membangun sebuah <strong>preview landing page</strong>. Ini adalah
+      <em>development environment</em> , bukan website final. Tujuannya satu: memberi gambaran arah visual sebelum
+      proyek resmi dimulai. Seluruh konten, layout, maupun desain di dalamnya sepenuhnya terbuka untuk diubah.
+    </p>
+
+    <div style="margin: 40px 0; display: flex; align-items: center; justify-content: flex-start;">
+      <a href="https://houseofpeace-lp.vercel.app" target="_blank" class="cta-btn" style="text-decoration:none; padding:20px 40px; font-size:18px; display:inline-flex; align-items:center; gap:12px; box-shadow: 0 20px 40px -15px rgba(22,163,74,0.3);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        Lihat Live Preview Landing Page
+      </a>
+    </div>
+
+    <div class="callout">
+      <strong>Catatan soal Preview</strong>
+      <p>Preview yang tersedia adalah prototype untuk keperluan visualisasi. Tidak ada satu pun elemen yang bersifat
+        final. Ini titik awal diskusi, bukan keputusan yang sudah diambil.</p>
+    </div>
+
+    <p class="prose">
+      Proposal ini mencakup dua fase. <strong>Phase 1</strong> adalah Landing Page yang dirancang untuk mengkonversi
+      pengunjung dari paid ads menjadi pasien aktif. <strong>Phase 2</strong> adalah Company Profile Website lima
+      halaman, untuk audiens yang sedang melakukan riset lebih dalam sebelum memutuskan.
+    </p>
+
+    <div class="bento-3">
+      <div class="callout">
+        <strong>5.000+ Pasien</strong>
+        <p>Track record nyata yang belum sepenuhnya tersampaikan ke audiens digital yang tepat.</p>
+      </div>
+      <div class="callout">
+        <strong>20+ Media Nasional</strong>
+        <p>Detikcom, TV One, Pertamina, Kemenhub RI , social proof kuat yang menunggu untuk dioptimalkan.</p>
+      </div>
+      <div class="callout">
+        <strong>14 Hari Go-Live</strong>
+        <p>Target sejak penandatanganan proposal dan penerimaan DP, dengan asumsi aset diserahkan tepat waktu.</p>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div class="brand">House of Peace × Majesta Solution</div>
+      <div class="version">01 , Ringkasan Eksekutif</div>
+    </div>
+  </div>
+
+
+  <!-- 02 PEMAHAMAN SITUASI -->
+  <div class="page page-break">
+    <div class="section-label">Section 02</div>
+    <div class="section-title">Pemahaman <span>Situasi HOPE</span></div>
+    <div class="section-divider"></div>
+
+    <p class="prose">
+      Hipnoterapi bukan layanan yang gampang dijual secara digital. Audiensnya datang dengan beban yang berat ,
+      trauma,
+      kecemasan, depresi bertahun-tahun , dan skeptisisme yang tidak kalah berat. Mereka butuh merasa aman sebelum
+      bisa
+      percaya, dan percaya sebelum berani bertindak.
+    </p>
+
+    <p class="prose">
+      Tantangan website HOPE bukan sekadar soal estetika. Tantangannya adalah membangun ruang digital yang terasa
+      seperti tempat yang aman untuk datang , tempat di mana calon pasien yang baru pertama kali membaca tentang
+      hipnoterapi merasa dimengerti, bukan dinilai.
+    </p>
+
+    <h3>Apa yang Membuat HOPE Berbeda</h3>
+
+    <div class="comparison">
+      <div class="comparison-col bad">
+        <div class="comparison-header">Klinik pada Umumnya</div>
+        <div class="comparison-item"><span>,&nbsp;</span> Menyentuh 12% pikiran sadar saja</div>
+        <div class="comparison-item"><span>,&nbsp;</span> Hasil terasa setelah berbulan-bulan</div>
+        <div class="comparison-item"><span>,&nbsp;</span> Bergantung pada obat-obatan kimia</div>
+        <div class="comparison-item"><span>,&nbsp;</span> Tidak ada program pasca-sesi</div>
+        <div class="comparison-item"><span>,&nbsp;</span> Tanpa supervisi medis terintegrasi</div>
+      </div>
+      <div class="comparison-col good">
+        <div class="comparison-header">House of Peace</div>
+        <div class="comparison-item"><span>→&nbsp;</span> Langsung ke 88% pikiran bawah sadar</div>
+        <div class="comparison-item"><span>→&nbsp;</span> 90% pasien merasakan perubahan sejak sesi pertama</div>
+        <div class="comparison-item"><span>→&nbsp;</span> 100% tanpa obat , reprogram dari dalam</div>
+        <div class="comparison-item"><span>→&nbsp;</span> Komunitas meditasi mingguan seumur hidup</div>
+        <div class="comparison-item"><span>→&nbsp;</span> Supervisi dokter medis, diagnosa terintegrasi</div>
+      </div>
+    </div>
+
+    <p class="prose">
+      Semua keunggulan itu terbukti secara klinis dan dirasakan oleh ribuan pasien. Namun, kami menyadari bahwa
+      kualitas
+      pelayanan yang luar biasa ini mungkin belum sepenuhnya tersampaikan dengan optimal di ruang digital saat ini.
+      Calon pasien yang mencari bantuan melalui Google mungkin kehilangan kesempatan untuk menemukan solusi bermakna
+      yang HOPE tawarkan.
+    </p>
+
+    <h3>Peluang yang Belum Dioptimalkan</h3>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Paid Ads tanpa Landing Page</div>
+        <p>Setiap rupiah yang diinvestasikan ke iklan berbayar berisiko hilang begitu saja apabila tidak ada halaman
+          yang cukup kredibel untuk menangkap pengunjung yang datang. Tanpa landing page yang dioptimalkan untuk
+          konversi, traffic iklan tidak akan berubah menjadi pasien.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Organic Search yang Kosong</div>
+        <p>Orang yang mengetik "hipnoterapi trauma Jakarta" atau "terapi kecemasan tanpa obat" saat ini tidak
+          menemukan
+          HOPE di halaman pertama Google. Mereka menemukan kompetitor yang mungkin jauh lebih lemah secara kredensial,
+          tapi lebih terlihat secara digital.</p>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div class="brand">House of Peace × Majesta Solution</div>
+      <div class="version">02 , Pemahaman Situasi</div>
+    </div>
+  </div>
+
+
+  <!-- 03 SCOPE PEKERJAAN -->
+  <div class="page page-break">
+    <div class="section-label">Section 03</div>
+    <div class="section-title">Scope Pekerjaan dan <span>Deliverables</span></div>
+    <div class="section-divider"></div>
+
+    <p class="prose" style="margin-bottom:24px;">
+      Landing page adalah mesin konversi. Seluruh arsitektur kontennya disusun mengikuti perjalanan psikologis calon
+      pasien: dari rasa dimengerti, menuju kepercayaan, hingga tindakan nyata berupa kontak pertama via WhatsApp.
+    </p>
+
+    <p
+      style="font-size:13px; color:var(--text-secondary); margin-bottom:8px; font-weight:600; letter-spacing:1px; text-transform:uppercase;">
+      TERMASUK DALAM PHASE 1</p>
+    <ul class="bullet-list">
+      <li>Pembangunan <strong>11 section landing page</strong> sesuai arsitektur konten yang disepakati</li>
+      <li>Implementasi design system <strong>"Ruang Pulih"</strong>: color palette, tipografi, spacing, dan komponen
+        visual</li>
+      <li>Seluruh halaman <strong>mobile responsive</strong>, diuji pada perangkat iOS dan Android</li>
+      <li>Animasi scroll berbasis Framer Motion: transisi halus tanpa elemen yang mengganggu kenyamanan membaca</li>
+      <li>Integrasi <strong>WhatsApp CTA</strong> dengan pesan pre-filled di setiap section yang relevan</li>
+      <li>Setup <strong>Google Analytics</strong> untuk tracking perilaku pengunjung dan sumber traffic</li>
+      <li>Google Maps embed untuk lokasi di Kedoya Utara, Kebon Jeruk, Jakarta Barat</li>
+      <li>Deploy ke <strong>domain resmi HOPE</strong> menggunakan layanan hosting Majesta</li>
+      <li>Pre-launch verification: fungsionalitas, page speed, dan kompatibilitas lintas browser</li>
+    </ul>
+
+    <p
+      style="font-size:13px; color:var(--text-secondary); margin-bottom:8px; margin-top:32px; font-weight:600; letter-spacing:1px; text-transform:uppercase;">
+      TIDAK TERMASUK DALAM PHASE 1</p>
+    <ul class="bullet-list">
+      <li>Company Profile Website , scope Phase 2, dengan timeline terpisah</li>
+      <li>Pembuatan copywriting baru (menggunakan copy yang sudah tersedia dari materi HOPE)</li>
+      <li>Pembuatan, editing, atau retouching foto dan ilustrasi (aset disediakan oleh HOPE)</li>
+      <li>Sistem booking online atau integrasi payment gateway</li>
+    </ul>
+
+    <h3>Phase 2 , Company Profile Website <span class="tag tag-sage"
+        style="font-size:11px; vertical-align:middle;">Opsional</span></h3>
+    <p class="prose" style="margin-bottom:24px;">
+      Company Profile melayani warm traffic , pengunjung yang sudah tahu tentang HOPE dan sedang riset lebih dalam
+      sebelum memutuskan. Tujuannya bukan konversi langsung, tapi membangun kepercayaan yang cukup untuk mendorong
+      booking dalam 1 sampai 3 hari setelah kunjungan pertama.
+    </p>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title" style="font-size:15px;">/beranda</div>
+        <p><strong>Homepage</strong> , wajah merek, 3 USP terkuat, routing ke landing page</p>
+      </div>
+      <div class="card">
+        <div class="card-title" style="font-size:15px;">/tentang-kami</div>
+        <p><strong>About</strong> , kisah pendirian, metodologi, filosofi, dan tagline merek</p>
+      </div>
+      <div class="card">
+        <div class="card-title" style="font-size:15px;">/layanan</div>
+        <p><strong>Services</strong> , detail sesi individual, teleconsultation, komunitas meditasi</p>
+      </div>
+      <div class="card">
+        <div class="card-title" style="font-size:15px;">/tim</div>
+        <p><strong>Team</strong> , profil lengkap tim profesional HOPE beserta kredensial</p>
+      </div>
+      <div class="card">
+        <div class="card-title" style="font-size:15px;">/kontak</div>
+        <p><strong>Contact</strong> , form booking, WhatsApp CTA primer, peta, jam operasional</p>
+      </div>
+      <div class="card" style="background:var(--border-color); border-color:var(--border-color);">
+        <div class="card-title" style="font-size:15px; color:var(--text-secondary);">/artikel</div>
+        <p style="color:var(--text-secondary);">Blog , <strong>Phase 2B, opsional.</strong> Direkomendasikan hanya
+          saat
+          minimal 5 artikel siap dipublikasikan.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Rekomendasi Strategis</strong>
+      <p>Phase 2 idealnya dimulai setelah Phase 1 sudah menghasilkan data konversi yang terukur. Dengan cara itu,
+        setiap
+        keputusan desain dan konten di Phase 2 didasarkan pada bukti , bukan asumsi tentang apa yang kira-kira
+        diinginkan audiens.</p>
+    </div>
+
+    <div class="doc-footer">
+      <div class="brand">House of Peace × Majesta Solution</div>
+      <div class="version">03 , Scope Pekerjaan</div>
+    </div>
+  </div>
+
+
+  <!-- 04 INFRASTRUKTUR -->
+  <div class="page page-break">
+    <div class="section-label">Section 04</div>
+    <div class="section-title">Infrastruktur dan <span>Tech Stack</span></div>
+    <div class="section-divider"></div>
+
+    <p class="prose" style="margin-bottom:32px;">
+      Setiap keputusan teknologi di sini diambil atas dasar tiga pertimbangan: performa jangka panjang, efisiensi
+      biaya,
+      dan kesiapan untuk berkembang ke Phase 2. Tidak ada komponen yang dipilih karena tren semata.
+    </p>
+
+    <h3>Development Stack</h3>
+    <table>
+      <tr>
+        <th>Layer</th>
+        <th>Teknologi</th>
+        <th>Alasan</th>
+      </tr>
+      <tr>
+        <td><strong>Framework</strong></td>
+        <td>Next.js 14 + TypeScript</td>
+        <td>Performa tinggi, struktur kode terorganisir, skalabel untuk Phase 2</td>
+      </tr>
+      <tr>
+        <td><strong>Styling</strong></td>
+        <td>Tailwind CSS</td>
+        <td>Konsistensi design system, development cepat, ukuran file minimal</td>
+      </tr>
+      <tr>
+        <td><strong>Animasi</strong></td>
+        <td>Framer Motion</td>
+        <td>Scroll animation yang halus , penting untuk kenyamanan audiens wellness</td>
+      </tr>
+      <tr>
+        <td><strong>Analytics</strong></td>
+        <td>Google Analytics</td>
+        <td>Tracking perilaku pengunjung, sumber traffic, dan conversion rate</td>
+      </tr>
+      <tr>
+        <td><strong>Preview / Dev</strong></td>
+        <td>Vercel (development environment)</td>
+        <td>Dipakai selama proses build untuk review dan iterasi , bukan hosting final</td>
+      </tr>
+    </table>
+
+    <h3>Infrastruktur Hosting Final</h3>
+    <p class="prose" style="margin-bottom:24px;">
+      Setelah website selesai dibangun dan disetujui oleh HOPE, website akan dipindahkan dari development environment
+      ke
+      infrastruktur hosting yang permanen dan siap production.
+    </p>
+
+    <div class="grid-2">
+      <div class="card card-dark">
+        <div class="card-title">Hosting , Layanan Majesta</div>
+        <p>
+          Majesta Solution menyediakan layanan hosting dedicated untuk klien dengan biaya <strong
+            style="color:var(--accent);">Rp 500.000 per tahun</strong>. Harga pasar minimum untuk layanan setara ada
+          di
+          angka Rp 1 juta per tahun ke atas.<br><br>
+          Keuntungan lainnya: hosting dikelola oleh tim yang sama yang membangun websitenya. Kalau ada isu teknis,
+          tidak
+          perlu menunggu support dari pihak ketiga.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-title">Domain , Pilihan HOPE</div>
+        <p>
+          Domain dibeli langsung oleh HOPE dengan estimasi biaya <strong>Rp 300.000–500.000 per tahun</strong>.
+          Majesta
+          akan mendampingi seluruh proses pendaftaran dan konfigurasi DNS.<br><br>
+          Untuk mencari dan membandingkan ketersediaan domain, HOPE bisa menggunakan:<br><br>
+          <strong>Exabytes</strong> , exabytes.co.id<br>
+          <strong>Hostinger</strong> , hostinger.co.id
+        </p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Mengapa Vercel Bukan Pilihan untuk Hosting Final?</strong>
+      <p>Vercel adalah alat development yang sangat efektif selama proses build dan review. Untuk environment produksi
+        jangka panjang, hosting dedicated memberikan kontrol penuh, performa lebih stabil, dan fleksibilitas yang
+        tidak
+        tersedia di platform gratis.</p>
+    </div>
+
+    <h3>Perbandingan Biaya Infrastruktur</h3>
+    <table>
+      <tr>
+        <th>Komponen</th>
+        <th>Harga Pasar</th>
+        <th>Dengan Majesta</th>
+      </tr>
+      <tr>
+        <td>Hosting (per tahun)</td>
+        <td>Rp 1.000.000+</td>
+        <td class="gold">Rp 500.000</td>
+      </tr>
+      <tr>
+        <td>Domain .id (per tahun)</td>
+        <td>Rp 150.000–500.000</td>
+        <td class="gold">Rp 300.000–500.000 (beli langsung)</td>
+      </tr>
+      <tr>
+        <td>Setup dan konfigurasi</td>
+        <td>Biasanya ditagih terpisah</td>
+        <td class="gold">Termasuk dalam lingkup pekerjaan</td>
+      </tr>
+      <tr>
+        <td><strong>Total operasional tahunan</strong></td>
+        <td><strong>Rp 1.150.000+</strong></td>
+        <td class="gold"><strong>Rp 800.000–1.000.000</strong></td>
+      </tr>
+    </table>
+
+    <div class="doc-footer">
+      <div class="brand">House of Peace × Majesta Solution</div>
+      <div class="version">04 , Infrastruktur dan Tech Stack</div>
+    </div>
+  </div>
+
+
+  <!-- 05 TIMELINE -->
+  <div class="page page-break">
+    <div class="section-label">Section 05</div>
+    <div class="section-title">Timeline <span>Pelaksanaan</span></div>
+    <div class="section-divider"></div>
+
+    <p class="prose" style="margin-bottom:40px;">
+      Target go-live Phase 1 adalah <strong>14 hari kerja sejak penandatanganan dan penerimaan DP</strong>. Timeline
+      ini
+      realistis , dengan satu syarat kritis yang sepenuhnya ada di tangan HOPE: kecepatan penyerahan aset di hari-hari
+      pertama.
+    </p>
+
+    <ul class="step-list">
+      <li>
+        <div class="step-num gold">1</div>
+        <div class="step-content">
+          <h4>Hari 1 , Penandatanganan dan DP</h4>
+          <p>Proposal disetujui, DP 50% diterima. Proyek resmi dimulai. HOPE menyerahkan seluruh aset yang dibutuhkan
+            (lihat Section 06).</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num gold">2</div>
+        <div class="step-content">
+          <h4>Hari 1–5 , Penyerahan Aset dari HOPE</h4>
+          <p>Foto tim, nomor WhatsApp, logo media (20+ brand), testimoni tambahan, konfirmasi jam operasional.
+            Kecepatan
+            fase ini menentukan kecepatan keseluruhan proyek.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num gold">3</div>
+        <div class="step-content">
+          <h4>Hari 3–7 , Integrasi Aset dan Finalisasi Konten</h4>
+          <p>Seluruh placeholder diganti dengan konten final. Penyempurnaan visual, penyesuaian copy, dan verifikasi
+            alur konten per section.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Hari 7–9 , Review Bersama</h4>
+          <p>Sesi review bersama HOPE: tampilan, alur konten, mobile experience, dan fungsionalitas WhatsApp CTA.
+            Seluruh feedback dikumpulkan dan diprioritaskan.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h4>Hari 9–11 , Revisi</h4>
+          <p>Maksimal 3 putaran revisi termasuk dalam scope. Penyesuaian layout, konten, dan visual berdasarkan hasil
+            review bersama.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <h4>Hari 10–12 , Setup Domain dan Hosting</h4>
+          <p>HOPE melakukan pembelian domain. Majesta mengonfigurasi DNS dan menghubungkan domain ke layanan hosting.
+            SSL aktif otomatis.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">7</div>
+        <div class="step-content">
+          <h4>Hari 12–13 , Quality Assurance Final</h4>
+          <p>Verifikasi menyeluruh: page speed, kompatibilitas lintas browser, fungsionalitas WhatsApp CTA, akurasi
+            Google Analytics, dan tampilan di berbagai ukuran layar.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num sage">+</div>
+        <div class="step-content">
+          <h4>Hari 14 , Go-Live</h4>
+          <p>Website aktif di domain resmi HOPE. Pelunasan 50%. Serah terima akses penuh kepada HOPE.</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="callout">
+      <strong>Satu-satunya Variabel yang Bisa Menggeser Timeline</strong>
+      <p>Keterlambatan penyerahan aset dari HOPE. Semakin cepat aset diterima di hari-hari pertama, semakin cepat
+        website bisa go-live.</p>
+    </div>
+
+    <div class="doc-footer">
+      <div class="brand">House of Peace × Majesta Solution</div>
+      <div class="version">05 , Timeline Pelaksanaan</div>
+    </div>
+  </div>
+
+
+  <!-- 06 ASET -->
+  <div class="page page-break">
+    <div class="section-label">Section 06</div>
+    <div class="section-title">Aset yang Dibutuhkan <span>dari HOPE</span></div>
+    <div class="section-divider"></div>
+
+    <p class="prose" style="margin-bottom:32px;">
+      Berikut seluruh item yang perlu disiapkan HOPE sebelum atau segera setelah penandatanganan. Tidak ada yang
+      teknis
+      , cukup kumpulkan, kirimkan, dan Majesta akan mengurus sisanya.
+    </p>
+
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Item</th>
+        <th>Spesifikasi</th>
+        <th>Prioritas</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><strong>Foto Tim</strong></td>
+        <td>High-resolution, min. 800×800px, latar netral atau warm</td>
+        <td><span class="tag tag-gold">Wajib</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>Nomor WhatsApp Aktif</strong></td>
+        <td>Nomor yang akan digunakan untuk menerima booking dari website</td>
+        <td><span class="tag tag-gold">Wajib</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>Logo Media (20+ brand)</strong></td>
+        <td>Format PNG dengan background transparan , Detikcom, TV One, Pertamina, Kemenhub RI, dst.</td>
+        <td><span class="tag tag-gold">Wajib</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>Testimoni Tambahan</strong></td>
+        <td>Minimal 2–4 testimoni dalam format anonim, contoh: M****, 30 tahun</td>
+        <td><span class="tag tag-gold">Wajib</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>Domain</strong></td>
+        <td>Pembelian domain oleh HOPE , Majesta akan mendampingi prosesnya</td>
+        <td><span class="tag tag-gold">Wajib</span></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>Jam Operasional</strong></td>
+        <td>Hari dan jam layanan untuk section Booking dan FAQ</td>
+        <td><span class="tag tag-sage">Penting</span></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>Konfirmasi Teleconsultation</strong></td>
+        <td>Apakah layanan konsultasi online tersedia? Berpengaruh pada copy di beberapa section</td>
+        <td><span class="tag tag-sage">Penting</span></td>
+      </tr>
+    </table>
+
+    <div class="callout callout-dark">
+      <strong>Komitmen Majesta Solution</strong>
+      <p>Seluruh proses pendaftaran domain dan konfigurasi hosting akan didampingi penuh. HOPE tidak perlu menangani
+        aspek teknis ini sendirian. Cukup siapkan asetnya.</p>
+    </div>
+
+    <div class="doc-footer">
+      <div class="brand">House of Peace × Majesta Solution</div>
+      <div class="version">06 , Aset yang Dibutuhkan</div>
+    </div>
+  </div>
+
+
+  <!-- 07 INVESTASI -->
+  <div class="page page-break">
+    <div class="section-label">Section 07</div>
+    <div class="section-title">Investasi dan <span>Cara Pembayaran</span></div>
+    <div class="section-divider"></div>
+
+    <p class="prose" style="margin-bottom:40px;">
+      Investasi pada infrastruktur digital yang profesional adalah langkah strategis jangka panjang. Dengan
+      menghadirkan
+      website yang representatif dan mudah ditemukan, HOPE membuka pintu bagi lebih banyak pasien yang membutuhkan
+      bantuan. Cukup dengan menjangkau beberapa klien baru secara rutin melalui platform ini, nilai keberadaan website
+      akan dengan sendirinya memberikan kontribusi positif yang berkelanjutan bagi pertumbuhan klinik.
+    </p>
+
+    <h3>Phase 1 , Landing Page</h3>
+
+    <div class="price-box">
+      <div class="price-box-inner">
+        <div class="price-label">Jasa Pengembangan</div>
+        <div class="price-amount">Rp 3.500.000</div>
+        <div class="price-note">Satu kali bayar · Tidak ada biaya tersembunyi</div>
+        <ul class="price-includes">
+          <li>Pembangunan 11 section landing page lengkap</li>
+          <li>Implementasi design system "Ruang Pulih"</li>
+          <li>Mobile responsive dengan animasi Framer Motion</li>
+          <li>Integrasi WhatsApp CTA di seluruh halaman</li>
+          <li>Setup Google Analytics</li>
+          <li>Google Maps embed</li>
+          <li>Deploy ke domain dan hosting final</li>
+          <li>Quality assurance dan pre-launch checklist</li>
+          <li>3 putaran revisi pasca-review</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Biaya Operasional Tahunan (Setelah Go-Live)</h3>
+    <table>
+      <tr>
+        <th>Komponen</th>
+        <th>Biaya</th>
+        <th>Frekuensi</th>
+        <th>Keterangan</th>
+      </tr>
+      <tr>
+        <td><strong>Hosting , Layanan Majesta</strong></td>
+        <td class="gold">Rp 500.000</td>
+        <td>Per tahun</td>
+        <td>Ditagihkan ke HOPE oleh Majesta Solution</td>
+      </tr>
+      <tr>
+        <td><strong>Domain (.id)</strong></td>
+        <td class="gold">Rp 300.000–500.000</td>
+        <td>Per tahun</td>
+        <td>Dibeli dan diperpanjang langsung oleh HOPE</td>
+      </tr>
+      <tr>
+        <td><strong>Google Analytics</strong></td>
+        <td>Gratis</td>
+        <td>,</td>
+        <td>Tidak ada biaya tambahan</td>
+      </tr>
+      <tr>
+        <td><strong>Google Maps Embed</strong></td>
+        <td>Gratis</td>
+        <td>,</td>
+        <td>Hingga 28.000 load per bulan</td>
+      </tr>
+      <tr>
+        <td><strong>Total tahunan (mulai tahun ke-2)</strong></td>
+        <td class="gold"><strong>Rp 800.000–1.000.000</strong></td>
+        <td>Per tahun</td>
+        <td>,</td>
+      </tr>
+    </table>
+
+    <h3>Phase 2 , Company Profile Website <span class="tag tag-sage"
+        style="font-size:11px; vertical-align:middle;">Opsional</span></h3>
+    <table>
+      <tr>
+        <th>Komponen</th>
+        <th>Biaya</th>
+        <th>Keterangan</th>
+      </tr>
+      <tr>
+        <td><strong>Jasa Pengembangan</strong></td>
+        <td class="gold">Rp 6.500.000</td>
+        <td>5 halaman lengkap , seluruh komponen Phase 1 digunakan ulang</td>
+      </tr>
+      <tr>
+        <td><strong>Timeline</strong></td>
+        <td>±2 minggu</td>
+        <td>Detail disepakati setelah Phase 1 go-live dan data awal tersedia</td>
+      </tr>
+    </table>
+
+    <h3>Cara Pembayaran</h3>
+
+    <div class="payment-grid">
+      <div class="payment-card active">
+        <div class="payment-label">Tahap 1 , Proyek Dimulai</div>
+        <div class="payment-number">Rp 1.750.000</div>
+        <p class="prose" style="font-size:13px; margin-top:8px;">Down Payment 50%</p>
+        <p class="payment-trigger">Dibayarkan saat proposal disetujui. Proyek resmi dimulai setelah DP diterima.</p>
+      </div>
+      <div class="payment-card active">
+        <div class="payment-label">Tahap 2 , Go-Live</div>
+        <div class="payment-number">Rp 1.750.000</div>
+        <p class="prose" style="font-size:13px; margin-top:8px;">Pelunasan 50%</p>
+        <p class="payment-trigger">Dibayarkan saat website aktif di domain resmi HOPE dan diserahterimakan.</p>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div class="brand">House of Peace × Majesta Solution</div>
+      <div class="version">07 , Investasi</div>
+    </div>
+  </div>
+
+
+  <!-- 08 MAINTENANCE -->
+  <div class="page page-break">
+    <div class="section-label">Section 08</div>
+    <div class="section-title">Dukungan dan <span>Pemeliharaan</span></div>
+    <div class="section-divider"></div>
+
+    <p class="prose" style="margin-bottom:40px;">
+      Setelah go-live, Majesta Solution tetap hadir sebagai mitra kerja jangka panjang. Ada dua kategori perubahan
+      yang
+      mungkin dibutuhkan HOPE seiring waktu, masing-masing dengan kebijakan yang berbeda.
+    </p>
+
+    <div class="maint-grid">
+      <div class="maint-card free">
+        <div class="maint-header">
+          <div class="maint-icon free">+</div>
+          <div class="maint-title">Perubahan Minor</div>
+        </div>
+        <div class="maint-price free">Gratis · Tanpa batas waktu</div>
+        <p style="font-size:13px; color:var(--text-secondary); margin-bottom:16px;">Pembaruan yang tidak memerlukan
+          pengembangan baru:</p>
+        <ul class="maint-list">
+          <li><span class="icon">,</span> Update teks atau copywriting</li>
+          <li><span class="icon">,</span> Penggantian foto atau ilustrasi (format dan ukuran sama)</li>
+          <li><span class="icon">,</span> Pembaruan jam operasional, nomor WhatsApp, atau info kontak</li>
+          <li><span class="icon">,</span> Penambahan atau pengeditan testimoni (struktur yang sama)</li>
+          <li><span class="icon">,</span> Update logo di bagian AS SEEN ON</li>
+        </ul>
+      </div>
+      <div class="maint-card paid">
+        <div class="maint-header">
+          <div class="maint-icon paid">*</div>
+          <div class="maint-title">Perubahan Major</div>
+        </div>
+        <div class="maint-price paid">Fee berdasarkan kompleksitas</div>
+        <p style="font-size:13px; color:var(--text-secondary); margin-bottom:16px;">Perubahan yang memerlukan
+          pengembangan baru:</p>
+        <ul class="maint-list paid-list">
+          <li><span class="icon">,</span> Penambahan section baru</li>
+          <li><span class="icon">,</span> Redesain layout atau struktur halaman</li>
+          <li><span class="icon">,</span> Integrasi fitur baru (sistem booking online, form khusus, dll.)</li>
+          <li><span class="icon">,</span> Animasi atau interaksi baru yang memerlukan coding</li>
+        </ul>
+        <p style="font-size:12px; color:var(--text-secondary); margin-top:16px; font-style:italic;">Fee
+          dikomunikasikan
+          dan disetujui sebelum pengerjaan dimulai.</p>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div class="brand">House of Peace × Majesta Solution</div>
+      <div class="version">08 , Dukungan dan Pemeliharaan</div>
+    </div>
+  </div>
+
+
+  <!-- 09 SYARAT DAN KETENTUAN -->
+  <div class="page page-break">
+    <div class="section-label">Section 09</div>
+    <div class="section-title">Syarat dan <span>Ketentuan</span></div>
+    <div class="section-divider"></div>
+
+    <h3>Kepemilikan dan Akses</h3>
+    <ul class="bullet-list">
+      <li>Setelah pelunasan diterima, <strong>seluruh source code menjadi milik penuh HOPE</strong>.</li>
+      <li>Seluruh kredensial , domain, hosting, dan analytics , diserahkan kepada HOPE setelah go-live.</li>
+    </ul>
+
+    <h3>Revisi</h3>
+    <ul class="bullet-list">
+      <li>Scope mencakup <strong>3 putaran revisi</strong> setelah sesi review bersama selesai.</li>
+      <li>Yang termasuk dalam revisi: penyesuaian layout, warna, teks, urutan konten, dan elemen visual.</li>
+      <li>Perubahan mendasar pada konsep atau struktur arsitektur konten dihitung sebagai perubahan major di luar
+        scope.
+      </li>
+    </ul>
+
+    <h3>Keterlambatan dari Pihak HOPE</h3>
+    <ul class="bullet-list">
+      <li>Timeline 14 hari berlaku sejak DP diterima, dengan asumsi aset diserahkan pada Hari 1 sampai 5.</li>
+      <li>Apabila aset terlambat diserahkan, timeline bergeser secara proporsional dan bukan merupakan tanggung jawab
+        Majesta Solution.</li>
+    </ul>
+
+    <h3>Pembatalan</h3>
+    <ul class="bullet-list">
+      <li>Apabila HOPE membatalkan proyek secara sepihak dan tanpa alasan yang logis serta jelas, DP tidak dapat
+        dikembalikan. Apabila keputusan pembatalan disertai alasan yang jelas dan dapat dipertanggungjawabkan, DP
+        dikembalikan sebesar 50%.</li>
+      <li>Apabila Majesta Solution membatalkan karena kondisi di luar kendali (force majeure), DP dikembalikan
+        sepenuhnya.</li>
+    </ul>
+
+    <h3>Hosting Tahunan</h3>
+    <ul class="bullet-list">
+      <li>Layanan hosting Majesta ditagihkan sebesar <strong>Rp 500.000 per tahun</strong>, jatuh tempo setiap tahun
+        pada bulan yang sama dengan tanggal go-live.</li>
+      <li>Apabila HOPE memilih untuk tidak melanjutkan layanan hosting Majesta, seluruh source code dan aset
+        diserahkan
+        untuk dipindahkan ke hosting pilihan HOPE.</li>
+    </ul>
+
+    <div class="doc-footer">
+      <div class="brand">House of Peace × Majesta Solution</div>
+      <div class="version">09 , Syarat dan Ketentuan</div>
+    </div>
+  </div>
+
+
+  <!-- 10 LANGKAH SELANJUTNYA -->
+  <div class="page page-break">
+    <div class="section-label">Section 10</div>
+    <div class="section-title">Langkah <span>Selanjutnya</span></div>
+    <div class="section-divider"></div>
+
+    <p class="prose" style="margin-bottom:16px;">
+      Preview di <a href="https://houseofpeace-lp.vercel.app" target="_blank"
+        style="color:var(--accent); font-weight:600; text-decoration:none;">houseofpeace-lp.vercel.app</a> adalah
+      gambaran arah, bukan hasil akhir. Semua yang ada di sana bisa diubah, digeser, dan disempurnakan bersama setelah
+      proposal ini disetujui.
+    </p>
+
+    <p class="statement">
+      "This is an invitation to begin. Not a contract for a finalized product."
+    </p>
+
+    <div class="cta-section">
+      <h2>Satu Langkah untuk <span>Memulai</span></h2>
+      <p>Konfirmasi proposal ini dan transfer DP Rp 1.750.000. Dalam 14 hari, website HOPE akan live , siap menjangkau
+        calon pasien yang hari ini tidak bisa menemukan HOPE.</p>
+      <a class="cta-btn" href="https://api.kledo.com/bd0c4263-3817-485f-a3c4-b45036512e3d" target="_blank">Lihat
+        Quotation Resmi →</a>
+    </div>
+
+    <h3>Informasi Kontak</h3>
+    <table>
+      <tr>
+        <th>Kanal</th>
+        <th>Detail</th>
+      </tr>
+      <tr>
+        <td><strong>Perusahaan</strong></td>
+        <td>Majesta Solution , Strategic Finance dan Digital Advisory</td>
+      </tr>
+      <tr>
+        <td><strong>WhatsApp</strong></td>
+        <td>081933369963</td>
+      </tr>
+
+    </table>
+
+    <div style="margin-top:64px; text-align:center; padding:48px 0; border-top:1px solid var(--border-color);">
+      <img
+        src="data:image/jpeg;base64,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"
+        style="height:24px; width:auto; opacity:0.3; filter:grayscale(1);" alt="Majesta">
+      <p style="font-size:12px; color:var(--text-secondary); margin-top:16px; letter-spacing:1px;">
+        House of Peace × Majesta Solution , 4 Maret 2026 , Confidential
+      </p>
+    </div>
+  </div>
+
+  <button id="print-btn" onclick="window.print()">
+    Download Proposal (PDF)
+  </button>
+
+</body>
+
+</html>
