@@ -1669,165 +1669,152 @@
 
 
   <!-- ═══════════════════════════════════════════
-     03 SCOPE PEKERJAAN (REDESIGNED)
+     03 LINGKUP PEKERJAAN
 ═══════════════════════════════════════════ -->
-  <div class="page page-break page-dark relative font-geist bg-zinc-950 text-zinc-300">
-    <!-- Ambient Noise / Depth -->
-    <div class="pointer-events-none absolute inset-0 z-0 opacity-20"
-      style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');">
+  <div class="page page-break">
+    <div class="sec-header animate-in">
+      <div>
+        <div class="sec-num">03 &nbsp;/&nbsp; Lingkup Pekerjaan</div>
+        <div class="sec-title">Lingkup Pekerjaan<br><em>dan Deliverables</em></div>
+        <div class="sec-divider"></div>
+      </div>
     </div>
 
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-8 py-24 min-h-[100dvh] flex flex-col justify-center">
+    <p class="prose animate-in delay-1">
+      Satu paket pengembangan utuh mencakup dua buah infrastruktur antarmuka digital yang saling berkesinambungan:
+      <strong>Landing Page</strong> yang dikalibrasi ketat sebagai mesin konversi akuisisi berbayar, dan sebuah
+      <strong>Company Profile Terpadu</strong> enam halaman (termasuk modul blog mandiri) sebagai inti validasi
+      kredibilitas.
+    </p>
 
-      <div class="mb-20">
-        <div class="font-mono text-xs font-medium tracking-[0.12em] text-zinc-500 mb-4 uppercase">03 / Scope of Work
-        </div>
-        <h2 class="text-4xl md:text-5xl font-semibold tracking-[-0.02em] leading-tight text-white mb-6">
-          Architecting the<br><em class="font-instrument italic font-normal text-zinc-400">Digital Interface</em>
-        </h2>
-        <div class="w-12 h-1 bg-zinc-700 rounded-full"></div>
-      </div>
+    <div class="animate-in delay-2" style="margin-top:32px;">
+      <h3 style="font-size:16px; font-weight:700; color:var(--ink); margin-bottom:12px; letter-spacing:-0.01em;">A.
+        Landing Page (Mesin Konversi)</h3>
+      <table>
+        <tr>
+          <th style="width: 35%;">Deliverables</th>
+          <th>Detail Teknis</th>
+        </tr>
+        <tr>
+          <td><strong>11 Section Landing Page</strong></td>
+          <td>Pembangunan ekosistem 11 section sesuai arsitektur konten yang disepakati untuk tingkat konversi maksimal.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Implementasi "Ruang Pulih"</strong></td>
+          <td>Penerapan identitas visual dan design system "Ruang Pulih" secara komprehensif pada antarmuka.</td>
+        </tr>
+        <tr>
+          <td><strong>Cross-Device Fluidity</strong></td>
+          <td>Tampilan antarmuka yang adaptif dan responsif secara deterministik di seluruh bentang layar (iOS dan
+            Android).</td>
+        </tr>
+        <tr>
+          <td><strong>Integrasi Framer Motion</strong></td>
+          <td>Orkestrasi animasi scroll tingkat lanjut untuk memberikan umpan balik taktil (tactile feedback) yang
+            natural.</td>
+        </tr>
+        <tr>
+          <td><strong>WhatsApp CTA Pintar</strong></td>
+          <td>Integrasi pintu konversi langsung ke WhatsApp lengkap dengan parameter pesan yang telah disiapkan secara
+            kontekstual.</td>
+        </tr>
+        <tr>
+          <td><strong>Setup Google Analytics</strong></td>
+          <td>Konfigurasi analitik data untuk melacak lalu lintas pengguna dan efektivitas jalur konversi.</td>
+        </tr>
+        <tr>
+          <td><strong>Native Maps Embed</strong></td>
+          <td>Integrasi infrastruktur pemetaan interaktif mandiri yang langsung mengarah ke titik lokasi klinik.</td>
+        </tr>
+        <tr>
+          <td><strong>Rilis Produksi</strong></td>
+          <td>Pemublikasian sistem ke domain resmi HOPE yang diakhiri dengan verifikasi pre-launch secara menyeluruh.
+          </td>
+        </tr>
+      </table>
+    </div>
 
-      <p class="text-lg text-zinc-400 max-w-2xl leading-relaxed tracking-[-0.01em] mb-16">
-        The digital infrastructure consists of two synchronized environments: a highly optimized <strong>Conversion
-          Surface (Landing Page)</strong> built for targeted acquisition, and a <strong>Core Narrative Hub (Corporate
-          Profile)</strong> designed for deep trust building and clinical validation, governed by an integrated Content
-        Management System.
-      </p>
+    <div class="animate-in delay-3" style="margin-top:32px;">
+      <h3 style="font-size:16px; font-weight:700; color:var(--ink); margin-bottom:12px; letter-spacing:-0.01em;">B.
+        Company Profile (Struktur Utama)</h3>
+      <table>
+        <tr>
+          <th style="width: 35%;">Direktori Halaman</th>
+          <th>Detail Teknis</th>
+        </tr>
+        <tr>
+          <td><strong>/beranda</strong></td>
+          <td>Wajah merek secara digital, bertugas mengomunikasikan 3 USP terkuat klinik HOPE ke audiens publik.</td>
+        </tr>
+        <tr>
+          <td><strong>/tentang-kami</strong></td>
+          <td>Pusat narasi pembentukan entitas, menjelaskan kompas metodologi, dan nilai luhur filosofi klinis
+            perusahaan.</td>
+        </tr>
+        <tr>
+          <td><strong>/layanan</strong></td>
+          <td>Ruang penjelasan rinci terkait protokol sesi pemulihan personal maupun skema <em>teleconsultation</em>.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>/tim</strong></td>
+          <td>Ruang pemaparan susunan praktisi dan profil tenaga ahli untuk memvalidasi kredibilitas secara transparan.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>/kontak</strong></td>
+          <td>Jalur pendaftaran yang mengakomodasi formulir, routing pintu WhatsApp, serta aksesibilitas lokasi klinik.
+          </td>
+        </tr>
+        <tr>
+          <td><strong style="color:var(--accent);">/blog</strong> <span class="tag tag-green"
+              style="font-size:9px; font-weight:700;">Baru</span></td>
+          <td>Fasilitas terpadu penyaluran artikel edukasi dan pandangan seputar <em>wellness</em>, dikendalikan instan
+            lewat platform CMS.</td>
+        </tr>
+      </table>
+    </div>
 
-      <!-- Asymmetric Bento Grid -->
-      <div id="bento-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="animate-in delay-4" style="margin-top:32px;">
+      <h3 style="font-size:16px; font-weight:700; color:var(--ink); margin-bottom:12px; letter-spacing:-0.01em;">C. Di
+        Luar Ruang Lingkup (Tidak Termasuk)</h3>
+      <table>
+        <tr>
+          <th style="width: 35%;">Kategori Pembatasan</th>
+          <th>Detail Informasi</th>
+        </tr>
+        <tr>
+          <td><strong>Copywriting Creation</strong></td>
+          <td><strong>Tidak termasuk:</strong> Pengembangan maupun penulisan narasi pemasaran dari nol. Kami melakukan
+            utilisasi pada naskah yang secara utuh siap dari pihak HOPE.</td>
+        </tr>
+        <tr>
+          <td><strong>Asset Origination</strong></td>
+          <td><strong>Tidak termasuk:</strong> Pelaksanaan sesi pemotretan, produksi logo resolusi tinggi, atau
+            pembelian lisensi stok gambar premium. Seluruh grafis merupakan kewenangan HOPE.</td>
+        </tr>
+        <tr>
+          <td><strong>Transaction Systems</strong></td>
+          <td><strong>Tidak termasuk:</strong> Perakitan logika spesifik pengelolaan reservasi otomatis secara
+            menyeluruh dan validasi perpindahan dana otomatis di dalam website (Payment Gateway).</td>
+        </tr>
+      </table>
+    </div>
 
-        <!-- Large Card (2 Columns) -->
-        <div
-          class="bento-card md:col-span-2 relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-md p-10 flex flex-col justify-between transition-all duration-300 hover:scale-[1.01] hover:border-white/20 hover:bg-white/[0.07]">
-          <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
-          <div class="relative z-10">
-            <h3 class="text-2xl font-semibold text-white tracking-tight mb-4">Precision Conversion Surface</h3>
-            <p class="text-zinc-400 leading-relaxed mb-8 max-w-xl">
-              Engineered specifically to convert high-intent paid traffic. This is not a generic template; it is an
-              eleven-stage psychological architecture designed to transition visitors from skepticism to safety.
-            </p>
-            <ul class="flex flex-col gap-3">
-              <li class="flex items-start gap-4">
-                <div class="w-1.5 h-1.5 rounded-full bg-zinc-500 mt-2.5 shrink-0"></div>
-                <span class="text-zinc-400 text-sm">Deployment of the <strong>"Ruang Pulih"</strong> design
-                  system.</span>
-              </li>
-              <li class="flex items-start gap-4">
-                <div class="w-1.5 h-1.5 rounded-full bg-zinc-500 mt-2.5 shrink-0"></div>
-                <span class="text-zinc-400 text-sm">Fluid interaction physics via Framer Motion.</span>
-              </li>
-              <li class="flex items-start gap-4">
-                <div class="w-1.5 h-1.5 rounded-full bg-zinc-500 mt-2.5 shrink-0"></div>
-                <span class="text-zinc-400 text-sm">Zero-friction WhatsApp routing with contextual pre-filled
-                  parameters.</span>
-              </li>
-              <li class="flex items-start gap-4">
-                <div class="w-1.5 h-1.5 rounded-full bg-zinc-500 mt-2.5 shrink-0"></div>
-                <span class="text-zinc-400 text-sm">Deterministic rendering across iOS and Android viewports.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <div class="callout animate-in delay-5" style="margin-top:32px;">
+      <strong style="font-size:14px; display:block; margin-bottom:4px;">Satu Ekosistem Penunjang Klinis
+        Terintegrasi</strong>
+      <p style="font-size:13px; line-height:1.6;">Landing Page dan Company Profile tidaklah dirancang terpisah; keduanya
+        dilahirkan dari satu kerangka pikir pengembangan yang solid. Kesinambungan visual pada kedua kanal ini dirancang
+        untuk melahirkan "trust score" otentik dan ketenangan (peace of mind) bagi calon pasien HOPE.</p>
+    </div>
 
-        <!-- Small Card (1 Column) - Tech Context -->
-        <div
-          class="bento-card md:col-span-1 border border-white/10 bg-white/5 backdrop-blur-md rounded-[2rem] p-8 flex flex-col transition-all duration-300 hover:scale-[1.01] hover:border-white/20 hover:bg-white/[0.07]">
-          <h4 class="text-lg font-semibold text-white tracking-tight mb-4">Infrastructure Specs</h4>
-          <div class="flex-1 flex flex-col gap-4">
-            <div class="bg-black/20 rounded-xl p-4 border border-white/5">
-              <span class="block text-xs uppercase tracking-widest text-zinc-500 mb-1">Architecture</span>
-              <span class="block text-sm text-zinc-300 font-medium">Headless CMS Integration</span>
-            </div>
-            <div class="bg-black/20 rounded-xl p-4 border border-white/5">
-              <span class="block text-xs uppercase tracking-widest text-zinc-500 mb-1">Analytics</span>
-              <span class="block text-sm text-zinc-300 font-medium">Google Tag Deployment</span>
-            </div>
-            <div class="bg-black/20 rounded-xl p-4 border border-white/5">
-              <span class="block text-xs uppercase tracking-widest text-zinc-500 mb-1">Location Logic</span>
-              <span class="block text-sm text-zinc-300 font-medium">Native Maps Embed</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Small Card (1 Column) - Exclusions -->
-        <div
-          class="bento-card md:col-span-1 border border-white/10 bg-black/40 backdrop-blur-md rounded-[2rem] p-8 transition-all duration-300 hover:scale-[1.01] hover:border-white/20 hover:bg-black/50">
-          <h4 class="text-lg font-semibold text-zinc-300 tracking-tight mb-4 flex items-center gap-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
-            </svg>
-            Out of Scope
-          </h4>
-          <ul class="flex flex-col gap-3 mt-6">
-            <li class="text-zinc-500 text-sm leading-relaxed border-b border-white/5 pb-3">Copywriting synthesis
-              (utilizing client-provided narratives).</li>
-            <li class="text-zinc-500 text-sm leading-relaxed border-b border-white/5 pb-3">Asset origination
-              (photography/illustration).</li>
-            <li class="text-zinc-500 text-sm leading-relaxed pt-1">Payment gateway integration.</li>
-          </ul>
-        </div>
-
-        <!-- Large Card (2 Columns) - Corporate Hub -->
-        <div
-          class="bento-card md:col-span-2 relative overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md rounded-[2rem] p-10 transition-all duration-300 hover:scale-[1.01] hover:border-white/20 hover:bg-white/[0.07]">
-          <h3 class="text-2xl font-semibold text-white tracking-tight mb-8">Core Narrative Hub</h3>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div class="border border-white/10 bg-black/20 p-5 rounded-2xl">
-              <div class="font-mono text-xs text-zinc-500 mb-2">/index</div>
-              <p class="text-sm text-zinc-300">Brand identity establishment</p>
-            </div>
-            <div class="border border-white/10 bg-black/20 p-5 rounded-2xl">
-              <div class="font-mono text-xs text-zinc-500 mb-2">/about</div>
-              <p class="text-sm text-zinc-300">Methodology & clinical philosophy</p>
-            </div>
-            <div class="border border-white/10 bg-black/20 p-5 rounded-2xl">
-              <div class="font-mono text-xs text-zinc-500 mb-2">/services</div>
-              <p class="text-sm text-zinc-300">Protocol definitions</p>
-            </div>
-            <div class="border border-white/10 bg-black/20 p-5 rounded-2xl">
-              <div class="font-mono text-xs text-zinc-500 mb-2">/team</div>
-              <p class="text-sm text-zinc-300">Practitioner credentials</p>
-            </div>
-            <div class="border border-white/10 bg-black/20 p-5 rounded-2xl">
-              <div class="font-mono text-xs text-zinc-500 mb-2">/contact</div>
-              <p class="text-sm text-zinc-300">Acquisition forms & routing</p>
-            </div>
-            <div class="border border-zinc-500/30 bg-white/10 p-5 rounded-2xl">
-              <div class="font-mono text-xs text-white mb-2 flex items-center justify-between">
-                /blog <span
-                  class="text-[9px] uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded text-white">Dynamic</span>
-              </div>
-              <p class="text-sm text-zinc-200">CMS controlled publications</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
+    <div class="doc-footer">
+      <span class="brand">House of Peace × Majesta Solution</span>
+      <span class="ver">03 / Lingkup Pekerjaan</span>
     </div>
   </div>
-
-  <script type="module">
-    // Execute Framer Motion staggering for Bento Grid when in view
-    document.addEventListener("DOMContentLoaded", () => {
-      const { animate, stagger, inView } = window.motion;
-
-      inView("#bento-grid", ({ target }) => {
-        animate(
-          ".bento-card",
-          { opacity: [0, 1], y: [30, 0] },
-          {
-            duration: 0.8,
-            delay: stagger(0.15),
-            easing: [0.16, 1, 0.3, 1]
-          }
-        );
-      });
-    });
-  </script>
-
 
   <!-- ═══════════════════════════════════════════
      03B — CMS & PORTAL ADMIN (halaman lanjutan)
