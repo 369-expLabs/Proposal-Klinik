@@ -14,11 +14,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proposal Penawaran Jasa — House of Peace | Majesta Solution</title>
+
+  <!-- Add Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@300;400;500;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@300;400;500;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Geist:wght@300..900&display=swap"
     rel="stylesheet">
+
+  <!-- Add Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: {
+        preflight: false,
+      },
+      theme: {
+        extend: {
+          fontFamily: {
+            geist: ['Geist', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Add Framer Motion DOM -->
+  <script type="module">
+    import { animate, stagger, inView } from "https://cdn.jsdelivr.net/npm/motion@11.11.13/+esm"
+    window.motion = { animate, stagger, inView };
+  </script>
 
   <style>
     /* ─── TOKENS ─── */
@@ -198,8 +223,9 @@
     }
 
     .cover-logo img {
-      height: 72px;
-      width: auto;
+      height: auto;
+      width: 100%;
+      max-width: 280px;
     }
 
     .cover-logo-sub {
@@ -1643,92 +1669,164 @@
 
 
   <!-- ═══════════════════════════════════════════
-     03 SCOPE PEKERJAAN
+     03 SCOPE PEKERJAAN (REDESIGNED)
 ═══════════════════════════════════════════ -->
-  <div class="page page-break">
-    <div class="sec-header animate-in">
-      <div>
-        <div class="sec-num">03 &nbsp;/&nbsp; Scope Pekerjaan</div>
-        <div class="sec-title">Scope Pekerjaan<br><em>dan Deliverables</em></div>
-        <div class="sec-divider"></div>
-      </div>
+  <div class="page page-break page-dark relative font-geist bg-zinc-950 text-zinc-300">
+    <!-- Ambient Noise / Depth -->
+    <div class="pointer-events-none absolute inset-0 z-0 opacity-20"
+      style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');">
     </div>
 
-    <p class="prose animate-in delay-1">
-      Satu paket pengembangan mencakup dua komponen website yang saling melengkapi: <strong>Landing Page</strong>
-      sebagai mesin konversi untuk paid ads traffic, dan <strong>Company Profile Website</strong> enam halaman termasuk
-      blog — semuanya dilengkapi <strong>CMS dan portal admin</strong> agar HOPE bisa mengelola konten secara mandiri.
-    </p>
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-8 py-24 min-h-[100dvh] flex flex-col justify-center">
 
-    <div class="scope-split animate-in delay-2">
-      <div class="scope-col">
-        <h4>Landing Page — Mesin Konversi</h4>
-        <ul class="blist compact">
-          <li>Pembangunan <strong>11 section landing page</strong> sesuai arsitektur konten yang disepakati</li>
-          <li>Implementasi design system <strong>"Ruang Pulih"</strong></li>
-          <li>Mobile responsive, diuji pada iOS dan Android</li>
-          <li>Animasi scroll berbasis Framer Motion</li>
-          <li>Integrasi <strong>WhatsApp CTA</strong> dengan pesan pre-filled</li>
-          <li>Setup <strong>Google Analytics</strong></li>
-          <li>Google Maps embed — Kedoya Utara, Jakarta Barat</li>
-          <li>Deploy ke domain resmi HOPE</li>
-          <li>Pre-launch verification lengkap</li>
-        </ul>
+      <div class="mb-20">
+        <div class="font-mono text-xs font-medium tracking-[0.12em] text-zinc-500 mb-4 uppercase">03 / Scope of Work
+        </div>
+        <h2 class="text-4xl md:text-5xl font-semibold tracking-[-0.02em] leading-tight text-white mb-6">
+          Architecting the<br><em class="font-instrument italic font-normal text-zinc-400">Digital Interface</em>
+        </h2>
+        <div class="w-12 h-1 bg-zinc-700 rounded-full"></div>
       </div>
-      <div class="scope-divider"></div>
-      <div class="scope-col">
-        <h4>Company Profile — 6 Halaman</h4>
-        <div class="grid-2" style="gap:12px; margin-bottom:0;">
-          <div class="card" style="padding:20px; border-radius:1rem;">
-            <div class="card-title" style="font-size:13px;">/beranda</div>
-            <p style="font-size:12px;">Homepage — wajah merek, 3 USP terkuat</p>
-          </div>
-          <div class="card" style="padding:20px; border-radius:1rem;">
-            <div class="card-title" style="font-size:13px;">/tentang-kami</div>
-            <p style="font-size:12px;">About — kisah pendirian, metodologi, filosofi</p>
-          </div>
-          <div class="card" style="padding:20px; border-radius:1rem;">
-            <div class="card-title" style="font-size:13px;">/layanan</div>
-            <p style="font-size:12px;">Services — sesi individual, teleconsultation</p>
-          </div>
-          <div class="card" style="padding:20px; border-radius:1rem;">
-            <div class="card-title" style="font-size:13px;">/tim</div>
-            <p style="font-size:12px;">Team — profil lengkap beserta kredensial</p>
-          </div>
-          <div class="card" style="padding:20px; border-radius:1rem;">
-            <div class="card-title" style="font-size:13px;">/kontak</div>
-            <p style="font-size:12px;">Contact — form booking, WhatsApp CTA, peta</p>
-          </div>
-          <div class="card"
-            style="padding:20px; border-radius:1rem; background:var(--accent-xl); border-color:rgba(15,107,92,0.15);">
-            <div class="card-title" style="font-size:13px; color:var(--accent);">/blog <span class="tag tag-green"
-                style="font-size:9px;">Baru</span></div>
-            <p style="font-size:12px; color:var(--ink-2);">Blog — artikel edukasi, insight wellness, pengelolaan via CMS
+
+      <p class="text-lg text-zinc-400 max-w-2xl leading-relaxed tracking-[-0.01em] mb-16">
+        The digital infrastructure consists of two synchronized environments: a highly optimized <strong>Conversion
+          Surface (Landing Page)</strong> built for targeted acquisition, and a <strong>Core Narrative Hub (Corporate
+          Profile)</strong> designed for deep trust building and clinical validation, governed by an integrated Content
+        Management System.
+      </p>
+
+      <!-- Asymmetric Bento Grid -->
+      <div id="bento-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Large Card (2 Columns) -->
+        <div
+          class="bento-card md:col-span-2 relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-md p-10 flex flex-col justify-between transition-all duration-300 hover:scale-[1.01] hover:border-white/20 hover:bg-white/[0.07]">
+          <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-semibold text-white tracking-tight mb-4">Precision Conversion Surface</h3>
+            <p class="text-zinc-400 leading-relaxed mb-8 max-w-xl">
+              Engineered specifically to convert high-intent paid traffic. This is not a generic template; it is an
+              eleven-stage psychological architecture designed to transition visitors from skepticism to safety.
             </p>
+            <ul class="flex flex-col gap-3">
+              <li class="flex items-start gap-4">
+                <div class="w-1.5 h-1.5 rounded-full bg-zinc-500 mt-2.5 shrink-0"></div>
+                <span class="text-zinc-400 text-sm">Deployment of the <strong>"Ruang Pulih"</strong> design
+                  system.</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-1.5 h-1.5 rounded-full bg-zinc-500 mt-2.5 shrink-0"></div>
+                <span class="text-zinc-400 text-sm">Fluid interaction physics via Framer Motion.</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-1.5 h-1.5 rounded-full bg-zinc-500 mt-2.5 shrink-0"></div>
+                <span class="text-zinc-400 text-sm">Zero-friction WhatsApp routing with contextual pre-filled
+                  parameters.</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-1.5 h-1.5 rounded-full bg-zinc-500 mt-2.5 shrink-0"></div>
+                <span class="text-zinc-400 text-sm">Deterministic rendering across iOS and Android viewports.</span>
+              </li>
+            </ul>
           </div>
         </div>
+
+        <!-- Small Card (1 Column) - Tech Context -->
+        <div
+          class="bento-card md:col-span-1 border border-white/10 bg-white/5 backdrop-blur-md rounded-[2rem] p-8 flex flex-col transition-all duration-300 hover:scale-[1.01] hover:border-white/20 hover:bg-white/[0.07]">
+          <h4 class="text-lg font-semibold text-white tracking-tight mb-4">Infrastructure Specs</h4>
+          <div class="flex-1 flex flex-col gap-4">
+            <div class="bg-black/20 rounded-xl p-4 border border-white/5">
+              <span class="block text-xs uppercase tracking-widest text-zinc-500 mb-1">Architecture</span>
+              <span class="block text-sm text-zinc-300 font-medium">Headless CMS Integration</span>
+            </div>
+            <div class="bg-black/20 rounded-xl p-4 border border-white/5">
+              <span class="block text-xs uppercase tracking-widest text-zinc-500 mb-1">Analytics</span>
+              <span class="block text-sm text-zinc-300 font-medium">Google Tag Deployment</span>
+            </div>
+            <div class="bg-black/20 rounded-xl p-4 border border-white/5">
+              <span class="block text-xs uppercase tracking-widest text-zinc-500 mb-1">Location Logic</span>
+              <span class="block text-sm text-zinc-300 font-medium">Native Maps Embed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Small Card (1 Column) - Exclusions -->
+        <div
+          class="bento-card md:col-span-1 border border-white/10 bg-black/40 backdrop-blur-md rounded-[2rem] p-8 transition-all duration-300 hover:scale-[1.01] hover:border-white/20 hover:bg-black/50">
+          <h4 class="text-lg font-semibold text-zinc-300 tracking-tight mb-4 flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+            </svg>
+            Out of Scope
+          </h4>
+          <ul class="flex flex-col gap-3 mt-6">
+            <li class="text-zinc-500 text-sm leading-relaxed border-b border-white/5 pb-3">Copywriting synthesis
+              (utilizing client-provided narratives).</li>
+            <li class="text-zinc-500 text-sm leading-relaxed border-b border-white/5 pb-3">Asset origination
+              (photography/illustration).</li>
+            <li class="text-zinc-500 text-sm leading-relaxed pt-1">Payment gateway integration.</li>
+          </ul>
+        </div>
+
+        <!-- Large Card (2 Columns) - Corporate Hub -->
+        <div
+          class="bento-card md:col-span-2 relative overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md rounded-[2rem] p-10 transition-all duration-300 hover:scale-[1.01] hover:border-white/20 hover:bg-white/[0.07]">
+          <h3 class="text-2xl font-semibold text-white tracking-tight mb-8">Core Narrative Hub</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="border border-white/10 bg-black/20 p-5 rounded-2xl">
+              <div class="font-mono text-xs text-zinc-500 mb-2">/index</div>
+              <p class="text-sm text-zinc-300">Brand identity establishment</p>
+            </div>
+            <div class="border border-white/10 bg-black/20 p-5 rounded-2xl">
+              <div class="font-mono text-xs text-zinc-500 mb-2">/about</div>
+              <p class="text-sm text-zinc-300">Methodology & clinical philosophy</p>
+            </div>
+            <div class="border border-white/10 bg-black/20 p-5 rounded-2xl">
+              <div class="font-mono text-xs text-zinc-500 mb-2">/services</div>
+              <p class="text-sm text-zinc-300">Protocol definitions</p>
+            </div>
+            <div class="border border-white/10 bg-black/20 p-5 rounded-2xl">
+              <div class="font-mono text-xs text-zinc-500 mb-2">/team</div>
+              <p class="text-sm text-zinc-300">Practitioner credentials</p>
+            </div>
+            <div class="border border-white/10 bg-black/20 p-5 rounded-2xl">
+              <div class="font-mono text-xs text-zinc-500 mb-2">/contact</div>
+              <p class="text-sm text-zinc-300">Acquisition forms & routing</p>
+            </div>
+            <div class="border border-zinc-500/30 bg-white/10 p-5 rounded-2xl">
+              <div class="font-mono text-xs text-white mb-2 flex items-center justify-between">
+                /blog <span
+                  class="text-[9px] uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded text-white">Dynamic</span>
+              </div>
+              <p class="text-sm text-zinc-200">CMS controlled publications</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-
-    <ul class="blist animate-in" style="margin-top:20px;">
-      <li><strong>Tidak termasuk:</strong> pembuatan copywriting baru — menggunakan copy yang sudah tersedia dari materi
-        HOPE</li>
-      <li><strong>Tidak termasuk:</strong> pembuatan, editing, atau retouching foto dan ilustrasi — aset disediakan oleh
-        HOPE</li>
-      <li><strong>Tidak termasuk:</strong> sistem booking online atau integrasi payment gateway</li>
-    </ul>
-
-    <div class="callout animate-in delay-1">
-      <strong>Satu Paket, Satu Proyek</strong>
-      <p>Landing Page dan Company Profile dibangun dalam satu siklus pengembangan yang terintegrasi. Design system yang
-        konsisten memastikan pengalaman visual yang seamless antara kedua komponen website.</p>
-    </div>
-
-    <div class="doc-footer">
-      <span class="brand">House of Peace × Majesta Solution</span>
-      <span class="ver">03 / Scope Pekerjaan</span>
-    </div>
   </div>
+
+  <script type="module">
+    // Execute Framer Motion staggering for Bento Grid when in view
+    document.addEventListener("DOMContentLoaded", () => {
+      const { animate, stagger, inView } = window.motion;
+
+      inView("#bento-grid", ({ target }) => {
+        animate(
+          ".bento-card",
+          { opacity: [0, 1], y: [30, 0] },
+          {
+            duration: 0.8,
+            delay: stagger(0.15),
+            easing: [0.16, 1, 0.3, 1]
+          }
+        );
+      });
+    });
+  </script>
 
 
   <!-- ═══════════════════════════════════════════
