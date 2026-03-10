@@ -105,7 +105,7 @@ export default function TermsAndConditions() {
                         >
                             {/* Category Title (Sticky Left) */}
                             <div className="lg:sticky lg:top-24 self-start">
-                                <h3 className="text-2xl font-semibold text-white tracking-[-0.02em] leading-tight group-hover:text-zinc-200 transition-colors">
+                                <h3 className="text-2xl font-semibold text-white tracking-[-0.02em] leading-tight group-hover:text-zinc-200 transition-colors duration-300 uppercase">
                                     {clause.title}
                                 </h3>
                             </div>
@@ -116,10 +116,24 @@ export default function TermsAndConditions() {
                                     <div key={pointIndex} className="flex gap-4">
                                         <div className="w-1.5 h-1.5 rounded-full bg-zinc-500 mt-2.5 shrink-0 group-hover:bg-zinc-300 transition-colors duration-500"></div>
                                         <p className="text-zinc-400 leading-relaxed text-[15px] md:text-base max-w-[65ch] group-hover:text-zinc-300 transition-colors duration-500">
-                                            {/* Highlight specific structural/important words if necessary, otherwise straight text rendering */}
+                                            {/* Highlight specific structural/important words */}
                                             {point.split(/(HOPE|Majesta Solution|DP)/g).map((part, i) => {
                                                 if (['HOPE', 'Majesta Solution', 'DP'].includes(part)) {
                                                     return <strong key={i} className="text-zinc-200 font-medium">{part}</strong>;
+                                                }
+                                                // Format currency
+                                                if (part.includes('Rp 500.000')) {
+                                                    const subParts = part.split(/(Rp 500\.000)/g);
+                                                    return subParts.map((sub, j) =>
+                                                        sub === 'Rp 500.000' ? <strong key={`${i}-${j}`} className="text-zinc-200 font-medium">{sub}</strong> : sub
+                                                    );
+                                                }
+                                                // Format percentages
+                                                if (part.includes('50%')) {
+                                                    const subParts = part.split(/(50%)/g);
+                                                    return subParts.map((sub, j) =>
+                                                        sub === '50%' ? <strong key={`${i}-${j}`} className="text-zinc-200 font-medium">{sub}</strong> : sub
+                                                    );
                                                 }
                                                 return part;
                                             })}
